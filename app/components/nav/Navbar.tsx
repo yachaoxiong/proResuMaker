@@ -1,30 +1,22 @@
 import React from 'react'
-import Link from 'next/link'
-import { createClient } from '@/utils/supabase/server'
-import { redirect } from 'next/navigation'
-import { Button } from '@/components/ui/button'
 import NavLinks from './NavLinks'
 import NavAvatar from './NavAvatar'
+import Image from 'next/image'
+
 const NavBar = () => {
-  const signOut = async () => {
-    'use server'
-    const supabase = createClient()
-    await supabase.auth.signOut()
-    return redirect('/login')
-  }
   return (
-    <nav className="border-b w-full py-6 flex gap-6 px-6 justify-around items-center">
-      <div className="flex items-center gap-6">
-        <h1>ProResuMaker</h1>
+    <nav className="border-b w-full py-6 flex gap-6 px-6 lg:justify-around lg:items-center">
+      <div className="items-center gap-6 flex">
+        <Image
+          src="/images/logo-transparent-png.png"
+          alt="logo"
+          height={80}
+          width={260}
+        />
         <NavLinks />
       </div>
-      <div>
+      <div className="hidden lg:block">
         <ul className="flex space-x-4">
-          {/* <li>
-            <form action={signOut}>
-              <Button type="submit">Sign Out</Button>
-            </form>
-          </li> */}
           <li>
             <NavAvatar />
           </li>
