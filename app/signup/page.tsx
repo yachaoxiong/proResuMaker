@@ -55,7 +55,10 @@ export default function Signup({
         Back
       </Link>
 
-      <form className="animate-in flex-1 flex flex-col w-full justify-center gap-2 text-foreground">
+      <form
+        className="animate-in flex-1 flex flex-col w-full justify-center gap-2 text-foreground"
+        action={signUp}
+      >
         <label className="text-md" htmlFor="email">
           Email
         </label>
