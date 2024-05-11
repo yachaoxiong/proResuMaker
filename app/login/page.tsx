@@ -72,7 +72,7 @@ export default function Login({
         />
         <div className='flex flex-row justify-between'>
           <Checkbox title='Remember me' />
-          <div className='text-xs'>Forgot your password??</div>
+          <div className='text-xs'>Forgot your password?</div>
         </div>
         <Button
           className='bg-blue-800 text-white rounded-md px-4 py-2 mb-2'
@@ -81,7 +81,7 @@ export default function Login({
           Sign In
         </Button>
         <div className='text-sm text-center'>
-          Don’t have an account? <span className=' text-blue-600'>Sign up</span>
+          Don’t have an account? <Link href='/signup' className=' text-blue-600'>Sign up</Link>
         </div>
         <div className='flex flex-row justify-evenly items-center'>
           <div className='h-[1px] bg-slate-300 w-5/12'></div>
