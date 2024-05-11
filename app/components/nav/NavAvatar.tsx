@@ -32,7 +32,7 @@ export default function NavAvatar() {
                 className="flex items-center gap-6 p-2 font-medium hover:bg-gray-100 rounded-lg transition-all duration-300"
               >
                 <IoPersonCircle className="text-3xl" />
-                Account
+                Account & settings
               </Link>
             </PopoverClose>
           </li>

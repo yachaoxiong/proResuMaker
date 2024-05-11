@@ -19,16 +19,18 @@ export default function Hero() {
   ]
   return (
     <div>
-      <div className="flex justify-between items-center py-12  container flex-wrap lg:flex-nowrap gap-6">
-        <h1 className="text-3xl font-bold md:text-4xl lg:5xl">Dashboard</h1>
-        <div className="flex space-x-2 gap-6 flex-wrap sm:flex-nowrap lg:gap-2">
-          <Input type="text" placeholder="Search" />
-          <Link href="/add-new">
-            <Button>
-              <FaPlus />
-              Add New Resume
-            </Button>
-          </Link>
+      <div className="bg-white">
+        <div className="flex justify-between items-center py-12  container flex-wrap lg:flex-nowrap gap-6">
+          <h1 className="text-3xl font-bold md:text-4xl lg:5xl">Dashboard</h1>
+          <div className="flex space-x-2 gap-6 flex-wrap sm:flex-nowrap lg:gap-2">
+            <Input type="text" placeholder="Search" />
+            <Link href="/add-new">
+              <Button>
+                <FaPlus />
+                Add New Resume
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
       <Separator />
