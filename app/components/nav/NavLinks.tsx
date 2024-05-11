@@ -62,7 +62,7 @@ export default function NavLinks() {
         {navbarLinks.map((link) => (
           <li
             key={link.name}
-            className={`text-lg sm:text-md lg:text-xl relative lg:ml-8  font-semibold 
+            className={`text-lg sm:text-md lg:text-xl relative lg:ml-5  font-semibold 
             hover:bg-gray-200 rounded-lg 
             lg:hover:bg-transparent
             transition-all duration-300 ease-in-out p-2 
