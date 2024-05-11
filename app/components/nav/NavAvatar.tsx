@@ -9,6 +9,7 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
+  PopoverClose,
 } from '@/components/ui/popover'
 import SignOutButton from './SignOutButton'
 import Link from 'next/link'
@@ -25,22 +26,26 @@ export default function NavAvatar() {
       <PopoverContent className="w-100 mt-3">
         <ul className="flex flex-col ">
           <li>
-            <Link
-              href="/account"
-              className="flex items-center gap-6 p-2 font-medium hover:bg-gray-100 rounded-lg transition-all duration-300"
-            >
-              <IoPersonCircle className="text-3xl" />
-              Account
-            </Link>
+            <PopoverClose asChild>
+              <Link
+                href="/account"
+                className="flex items-center gap-6 p-2 font-medium hover:bg-gray-100 rounded-lg transition-all duration-300"
+              >
+                <IoPersonCircle className="text-3xl" />
+                Account
+              </Link>
+            </PopoverClose>
           </li>
           <li>
-            <Link
-              href="/help"
-              className="flex items-center gap-6 p-2 mb-2 font-medium hover:bg-gray-100 rounded-lg transition-all duration-300"
-            >
-              <IoIosHelpCircle className="text-3xl" />
-              Help & support
-            </Link>
+            <PopoverClose asChild>
+              <Link
+                href="/help"
+                className="flex items-center gap-6 p-2 mb-2 font-medium hover:bg-gray-100 rounded-lg transition-all duration-300"
+              >
+                <IoIosHelpCircle className="text-3xl" />
+                Help & support
+              </Link>
+            </PopoverClose>
           </li>
           <Separator />
           <li>
