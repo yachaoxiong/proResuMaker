@@ -4,7 +4,7 @@ import { IoIosApps } from "react-icons/io";
 export const navbarLinks = [
   { name: 'Dashboard', href: '/', icon: <FaHome className='lg:hidden' /> },
   { name: 'Templates', href: '/templates', icon: <FaFileAlt className='lg:hidden' /> },
-  { name: 'applications', href: '/applications', icon: <IoIosApps className='lg:hidden' /> },
+  { name: 'Applications', href: '/applications', icon: <IoIosApps className='lg:hidden' /> },
 ]
 export const userLinks = [
   { name: 'Account & settings', href: '/Account', showOnMobile: true, icon: <FaUser className='lg:hidden' /> },

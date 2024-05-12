@@ -24,7 +24,7 @@ export default function Signup({
         emailRedirectTo: `${origin}/auth/callback`,
       },
     })
-
+    console.log('error', error)
     if (error) {
       return redirect('/signup?message=Could not authenticate user')
     }

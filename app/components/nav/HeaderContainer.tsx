@@ -12,7 +12,7 @@ export default async function HeaderContainer({
   const {
     data: { user },
   } = await supabase.auth.getUser()
-
+  console.log('user', user)
   return user ? (
     <div>
       <NavBar />
