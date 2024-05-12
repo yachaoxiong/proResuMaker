@@ -9,7 +9,6 @@ import { useAppDispatch } from './../../redux/hooks'
 import MyInput from '@/app/components/common/MyInput';
 import { login } from '@/redux/slices/authSlice'
 import Title from '../components/common/Title'
-import Checkbox from '../components/common/Checkbox'
 
 export default function Login({
   searchParams,
@@ -71,7 +70,14 @@ export default function Login({
           onChange={(value) => setPassword(value)}
         />
         <div className='flex flex-row justify-between'>
-          <Checkbox title='Remember me' />
+          <div className="flex items-center space-x-2">
+            <input type='checkbox' />
+            <label
+              className="text-xs leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              Remember me
+            </label>
+          </div>
           <div className='text-xs'>Forgot your password?</div>
         </div>
         <Button
@@ -92,14 +98,14 @@ export default function Login({
           variant="outline"
           className='rounded-md px-4 py-2 mb-2'
         >
-            <Image 
-              className='mr-2'
-              src="/images/googleIcon.png"  
-              alt="googleIcon" 
-              width={20} 
-              height={20}
-            />
-            Sign in with Google
+          <Image
+            className='mr-2'
+            src="/images/googleIcon.png"
+            alt="googleIcon"
+            width={20}
+            height={20}
+          />
+          Sign in with Google
         </Button>
         {/* error messages */}
         {error && (
