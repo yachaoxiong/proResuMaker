@@ -1,14 +1,15 @@
 import React from 'react';
 import { InputProps } from '@/types/index';
+import { Input } from "@/components/ui/input"
 
-export default function Input(props: InputProps) {
-  const { title, type, placeHolder, required, width, onChange } = props;
+export default function MyInput(props: InputProps) {
+  const { title, width, onChange } = props;
   return (
     <div className={`flex flex-col gap-2 font-serif ${width ? width : ''}`}>
-      <label htmlFor={type} className="text-md">
+      <label htmlFor={props.type} className="text-md">
         {title}
       </label>
-      <input
+      <Input
         className='
           rounded-md 
           px-4 
@@ -17,10 +18,7 @@ export default function Input(props: InputProps) {
           border-neutral-200 
           border-2
         '
-        type={type?type:'text'}
-        name={type}
-        placeholder={placeHolder}
-        required={required}
+        {...props}
         onChange={(e) => onChange?.(e.target.value)}
       />
     </div>

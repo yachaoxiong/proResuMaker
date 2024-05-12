@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import { createClient } from '@/utils/supabase/client'
 import { Button } from '@/components/ui/button'
 import { useAppDispatch } from './../../redux/hooks'
-import Input from '@/app/components/common/Input';
+import MyInput from '@/app/components/common/MyInput';
 import { login } from '@/redux/slices/authSlice'
 import Title from '../components/common/Title'
 import Checkbox from '../components/common/Checkbox'
@@ -57,13 +57,13 @@ export default function Login({
           />
         </div>
         {/* input fields */}
-        <Input
+        <MyInput
           title='Email:'
           placeHolder='you@example.com'
           required={true}
           onChange={(value) => setEmail(value)}
         />
-        <Input
+        <MyInput
           title='Password:'
           type='password'
           placeHolder='••••••••'
@@ -75,7 +75,7 @@ export default function Login({
           <div className='text-xs'>Forgot your password?</div>
         </div>
         <Button
-          className='bg-blue-800 text-white rounded-md px-4 py-2 mb-2'
+          className='text-white rounded-md px-4 py-2 mb-2'
           onClick={signIn}
         >
           Sign In
@@ -92,7 +92,13 @@ export default function Login({
           variant="outline"
           className='rounded-md px-4 py-2 mb-2'
         >
-            <Image src="/images/googleIcon.png" alt="googleIcon" width={20} height={20} className='mr-2'/>
+            <Image 
+              className='mr-2'
+              src="/images/googleIcon.png"  
+              alt="googleIcon" 
+              width={20} 
+              height={20}
+            />
             Sign in with Google
         </Button>
         {/* error messages */}
