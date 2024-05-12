@@ -4,7 +4,7 @@ import { createClient } from '@/utils/supabase/server'
 import { redirect } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import Title from '../components/common/Title'
-import Input from '../components/common/MyInput'
+import Input from '../components/common/AppInput'
 
 export default function Signup({
   searchParams,

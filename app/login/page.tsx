@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import { createClient } from '@/utils/supabase/client'
 import { Button } from '@/components/ui/button'
 import { useAppDispatch } from './../../redux/hooks'
-import MyInput from '@/app/components/common/MyInput';
+import AppInput from '@/app/components/common/AppInput';
 import { login } from '@/redux/slices/authSlice'
 import Title from '../components/common/Title'
 
@@ -56,13 +56,13 @@ export default function Login({
           />
         </div>
         {/* input fields */}
-        <MyInput
+        <AppInput
           title='Email:'
           placeHolder='you@example.com'
           required={true}
           onChange={(value) => setEmail(value)}
         />
-        <MyInput
+        <AppInput
           title='Password:'
           type='password'
           placeHolder='••••••••'

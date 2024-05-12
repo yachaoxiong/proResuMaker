@@ -2,7 +2,7 @@ import React from 'react';
 import { InputProps } from '@/types/index';
 import { Input } from "@/components/ui/input"
 
-export default function MyInput(props: InputProps) {
+export default function AppInput(props: InputProps) {
   const { title, width, onChange } = props;
   return (
     <div className={`flex flex-col gap-2 font-serif ${width ? width : ''}`}>
