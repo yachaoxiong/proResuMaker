@@ -1,12 +1,15 @@
 import React from 'react';
-import { InputProps } from '@/types/index';
+import { InputProps } from '@/types/components/index';
 import { Input } from "@/components/ui/input"
 
 export default function AppInput(props: InputProps) {
-  const { title, width, onChange } = props;
+  const { className, title, onChange } = props;
   return (
-    <div className={`flex flex-col gap-2 font-serif ${width ? width : ''}`}>
-      <label htmlFor={props.type} className="text-md">
+    <div className={`${className} flex flex-col gap-2 font-serif`}>
+      <label 
+        className="text-md" 
+        htmlFor={title} 
+      >
         {title}
       </label>
       <Input

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TitleProps } from '@/types/index';
+import { TitleProps } from '@/types/components/index';
 
 export default function Title(props:TitleProps) {
   const { title,subTitle,boldTitle,titleFontSize,subTitleFontSize,font } = props;
