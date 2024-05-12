@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
 import Image from 'next/image'
+import AppInput from '../../common/AppInput'
 
 export default function GenerateResumeCard() {
   const [title, setTitle] = useState('')
@@ -16,6 +17,13 @@ export default function GenerateResumeCard() {
     title: 'Generate your template resume',
     description:
       'Craft a resume using our template with just a few details. Edit anytime later.',
+  }
+
+  const handleGenerateResume = () => {
+    console.log('Generate Resume')
+    console.log('Title:', title)
+    console.log('Industry:', industry)
+    console.log('Job Title:', jobTitle)
   }
   return (
     <div className="flex gap-6 container justify-center -mt-12 flex-col-reverse lg:flex-row">
@@ -35,36 +43,40 @@ export default function GenerateResumeCard() {
         <div className="flex flex-col gap-6 pt-6">
           <div className="flex justify-between gap-4 flex-col md:flex-row">
             <div className="flex flex-col gap-2 w-full">
-              <Label htmlFor="title">Title</Label>
-              <Input
-                className="w-100"
-                type="text"
+              <AppInput
                 id="title"
+                title="Title"
                 value={title}
-                onChange={(e) => setTitle(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setTitle(e.target.value)
+                }
               />
             </div>
             <div className="flex flex-col gap-2 w-full">
-              <Label htmlFor="industry">Industry</Label>
-              <Input
-                type="text"
+              <AppInput
                 id="industry"
+                title="Industry"
                 value={industry}
-                onChange={(e) => setIndustry(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setIndustry(e.target.value)
+                }
               />
             </div>
           </div>
           <div className="flex flex-col gap-2 w-full">
-            <Label htmlFor="jobTitle">Job Title</Label>
-            <Input
-              type="text"
+            <AppInput
               id="jobTitle"
+              title="jobTitle"
               value={jobTitle}
-              onChange={(e) => setJobTitle(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setJobTitle(e.target.value)
+              }
             />
           </div>
           <div className="flex justify-end">
-            <Button className="px-8">Generate Resume</Button>
+            <Button className="px-8" onClick={handleGenerateResume}>
+              Generate Resume
+            </Button>
           </div>
         </div>
       </Card>
