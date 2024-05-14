@@ -55,7 +55,6 @@ export default function Login({
               height={200}
             />
           </div>
-
           <Title
             title="Sign in to your account"
             boldTitle
