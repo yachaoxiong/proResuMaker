@@ -65,12 +65,12 @@ export default function Signup({
           className="animate-in flex-1 flex flex-col w-full justify-center gap-4 text-foreground font-serif"
           action={signUp}
         >
-          <AppInput
+          {/* <AppInput
             title="Name:"
             placeholder="Your name"
             required={true}
             name='name'
-          />
+          /> */}
           <AppInput
             title="Email:"
             placeholder="you@example.com"
